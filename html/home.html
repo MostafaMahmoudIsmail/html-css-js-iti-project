@@ -11,7 +11,7 @@
     <title>Home Page</title>
   </head>
   <body>
-    <div class="header ">
+    <div class="header">
       <div class="navbar section">
         <div class="logo">
           <p>BuyMe</p>
@@ -25,14 +25,44 @@
           </ul>
 
           <div class="tools">
-            <input type="text" placeholder="What Are You Looking For"/>
-            <i class="fa-solid fa-magnifying-glass last-icon" ></i>
-            <i class="fa-solid fa-cart-plus" ></i>
-            <i class="fa-regular fa-heart " ></i>
+            <input type="text" placeholder="What Are You Looking For" />
+            <i class="fa-solid fa-magnifying-glass last-icon"></i>
+            <i class="fa-solid fa-cart-plus"></i>
+            <i class="fa-regular fa-heart"></i>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container section">
+      <div class="mySlides fade">
+        <img src="../resources/slider/img1.avif" style="width: 100%" />
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="../resources/slider/img2.avif" style="width: 100%" />
+        <div class="text">Caption Two</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="../resources/slider/img3.avif" style="width: 100%" />
+        <div class="text">Caption Three</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    
+
     <script src="../js/home.js"></script>
   </body>
 </html>
