@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Slider</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f5f5f5;
+    }
+
+    .slider {
+      width: 300px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .cards {
+      display: flex;
+      transition: transform 0.3s ease;
+    }
+
+    .card {
+      min-width: 300px;
+      height: 180px;
+      margin-right: 10px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .btn.left { left: -40px; }
+    .btn.right { right: -40px; }
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <button class="btn left" onclick="moveSlide(-1)">‹</button>
+    <div class="cards" id="cards">
+      <div class="card">Category 1</div>
+      <div class="card">Category 2</div>
+      <div class="card">Category 3</div>
+      <div class="card">Category 4</div>
+      <div class="card">Category 5</div>
+    </div>
+    <button class="btn right" onclick="moveSlide(1)">›</button>
+  </div>
+
+  <script>
+    let index = 0;
+    function moveSlide(step) {
+      const cards = document.getElementById("cards");
+      const totalCards = cards.children.length;
+      const cardWidth = cards.children[0].offsetWidth + 10; // 300px + margin
+      index += step;
+
+      if (index < 0) index = 0;
+      if (index > totalCards - 1) index = totalCards - 1;
+
+      cards.style.transform = `translateX(${-index * cardWidth}px)`;
+    }
+  </script>
+</body>
+</html>
