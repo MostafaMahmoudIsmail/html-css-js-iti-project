@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -216,6 +215,7 @@
   height: 145px;
   border: 1px solid #c9c9c9;
   text-align: center;
+  cursor: pointer;
 }
 
 .category-card:hover {
@@ -269,6 +269,22 @@
   border-radius: 15px;
   line-height: 1;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  cursor: pointer;
+}
+
+.product-card > i {
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 5px;
+  top: 5px;
+  position: absolute;
+  z-index: 99;
 }
 
 .card-image {
@@ -284,8 +300,30 @@
   border-radius: 15px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  position: relative;
+}
+.card-image{
+  position: relative;
+  
+}
+.product-card .card-image:after {
+  content: "Add To Cart";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  opacity: 0;
+  transition: all .5s ease;
 }
 
+.product-card .card-image:hover::after {
+  opacity: 1;
+}
 .card-title {
   font-size: 15px;
   font-weight: 700;
@@ -308,6 +346,7 @@
 }
 .product-button {
   text-align: center;
+  
 }
 .product-button button {
   color: white;
@@ -316,6 +355,7 @@
   padding: 10px;
   border-color: transparent;
   margin-top: 50px;
+  cursor: pointer;
 }
 
 /* hero */
@@ -338,8 +378,10 @@
 
 .footer h3 {
   font-size: 30px;
+  cursor: pointer;
 }
 
 .footer p {
   font-size: 15px;
+  cursor: pointer;
 }
