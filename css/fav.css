@@ -146,7 +146,25 @@
   border-radius: 15px;
   line-height: 1;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
+
+.product-card > i{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: #db4444;
+    color: white;
+    border-radius: 50%; 
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-self: center;
+    justify-content: center;
+}
+
 
 .card-image {
   height: 70%;
