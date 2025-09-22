@@ -335,7 +335,7 @@
   color: #db4444;
 }
 .card-content {
-  /* background-color: #bbb; */
+  margin-left: 9px;
 }
 .card-content .stars {
   display: inline;
@@ -364,6 +364,14 @@
   margin-top: 100px;
   margin-bottom: 100px;
 }
+
+/* advertisment */
+.advertisment{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+
 
 /* footer */
 .footer {
