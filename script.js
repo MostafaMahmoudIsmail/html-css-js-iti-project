@@ -2,22 +2,41 @@ let data = fetch("https://dummyjson.com/c/3a38-f717-4524-9bf6")
   .then((response) => response.json())
   .then((data) => console.log(data));
 
-
 /**
- *  "categories": [
-    "Phones",
-    "Camera",
-    "HeadPhones",
-    "Laptop",
-    "TV",
-    "Gamepad"
-  ],
+ *  {
+  "categories": [
+    {
+      "name": "Phones",
+      "icon": "fa-solid fa-mobile-screen-button"
+    },
+    {
+      "name": "Camera",
+      "icon": "fa-solid fa-camera"
+    },
+    {
+      "name": "HeadPhones",
+      "icon": "fa-solid fa-headphones"
+    },
+    {
+      "name": "Laptop",
+      "icon": "fa-solid fa-laptop"
+    },
+    {
+      "name": "TV",
+      "icon": "fa-solid fa-tv"
+    },
+    {
+      "name": "Gamepad",
+      "icon": "fa-solid fa-gamepad"
+    }
+  ]
+}
  */
 
-  // https://dummyjson.com/c/82ab-73bb-419f-afdc
+// https://dummyjson.com/c/e285-1aca-444f-9e1f
 
 /*
-  // https://dummyjson.com/c/3a38-f717-4524-9bf6
+  // https://dummyjson.com/c/381e-fc22-437e-9b07 => 6 product
  *"products": [
     {
       "id": 1,
