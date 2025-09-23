@@ -274,3 +274,9 @@
   margin-bottom: 50px;
 }
 
+/* icons */
+.fa-heart.active-heart {
+  color: red;
+  font-size: 30px;
+  transition: all 0.3s ease;
+}
