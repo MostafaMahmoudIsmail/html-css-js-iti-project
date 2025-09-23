@@ -68,19 +68,7 @@
     <button class="btn right" onclick="moveSlide(1)">›</button>
   </div>
 
-  <script>
-    let index = 0;
-    function moveSlide(step) {
-      const cards = document.getElementById("cards");
-      const totalCards = cards.children.length;
-      const cardWidth = cards.children[0].offsetWidth + 10; // 300px + margin
-      index += step;
-
-      if (index < 0) index = 0;
-      if (index > totalCards - 1) index = totalCards - 1;
-
-      cards.style.transform = `translateX(${-index * cardWidth}px)`;
-    }
+  <script src="/script.js">
   </script>
 </body>
 </html>
