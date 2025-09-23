@@ -11,7 +11,6 @@
     <title>Check Out</title>
   </head>
   <body>
-    
     <div class="header">
       <div class="navbar section">
         <div class="logo">
@@ -35,7 +34,66 @@
       </div>
     </div>
 
-    
+    <div class="section-header section">
+      <div class="icon"></div>
+      <div class="title">Billing Details</div>
+    </div>
+
+    <div class="billing-details section">
+      <div class="col1">
+        <label for="first-name">First Name</label><br />
+        <input type="text" name="first-name" id="first-name" /><br />
+        <label for="last-name">Last Name</label><br />
+        <input type="text" name="last-name" id="last-name" /><br />
+        <label for="street-address">Street Address</label><br />
+        <input type="text" name="street-address" id="street-address" /><br />
+        <label for="city">City</label><br />
+        <input type="text" name="city" id="city" /><br />
+        <label for="phone-number">Phone Number</label><br />
+        <input type="text" name="phone-number" id="phone-number" /><br />
+        <label for="email-address">Email Address</label><br />
+        <input type="text" name="email-address" id="email-address" /><br />
+      </div>
+      <div class="col2">
+        <div class="products">
+          <div class="product">
+            <img
+              src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg"
+              alt=""
+            />
+            <p class="product-name">smart watch</p>
+            <p class="product-price">$650</p>
+          </div>
+        </div>
+        <div class="salary">
+          <div class="subtotal">
+            <p>Sub Total:</p>
+            <p>$650</p>
+          </div>
+          <div class="shipping">
+            <p>Shipping:</p>
+            <p>Free</p>
+          </div>
+          <div class="total">
+            <p>Total:</p>
+            <p>$650</p>
+          </div>
+        </div>
+        <input type="radio" name="bank" id="bank" />
+        <label for="bank">Bank</label>
+        <br>
+        
+        <input type="radio" name="cash" id="cash" />
+        <label for="cash">Cash On Delivery</label>
+
+        <div class="coupon">
+          <input type="text" name="coupon-code" id="coupon-code" placeholder="Coupon Code">
+          <button>Apply Coupon</button>
+        </div>
+
+        <button>Place Order</button>
+      </div>
+    </div>
 
     <div class="footer">
       <div class="col1">
