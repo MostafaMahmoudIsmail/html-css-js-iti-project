@@ -75,6 +75,7 @@ window.addEventListener("load", () => {
     let products = data.products;
 
     loadFav();
+    
 
     let productContainer = document.getElementsByClassName(
       "ourProducts-content"

@@ -36,10 +36,8 @@
 }
 
 .ourProducts-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
   align-items: center;
 }
 
