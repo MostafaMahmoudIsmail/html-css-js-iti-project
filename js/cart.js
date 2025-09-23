@@ -35,7 +35,7 @@ window.addEventListener("load", () => {
 
     let price = document.createElement("p");
     price.classList.add("product-price");
-    price.textContent = `$${product.price}`;
+    price.textContent = `${product.price}`;
 
     cartItem.appendChild(productDiv);
     cartItem.appendChild(productDesc);
