@@ -37,6 +37,8 @@ let data = fetch("https://dummyjson.com/c/3a38-f717-4524-9bf6")
 
 /*
   // https://dummyjson.com/c/381e-fc22-437e-9b07 => 6 product
+
+  // https://dummyjson.com/c/0792-0dc3-4a3d-b95e => all
  *"products": [
     {
       "id": 1,
