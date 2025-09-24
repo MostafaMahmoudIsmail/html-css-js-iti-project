@@ -1,3 +1,6 @@
+const params = new URLSearchParams(window.location.search);
+let Gcategory = params.get("category");
+
 window.addEventListener("load", () => {
   async function initProducts() {
     let res = await fetch("https://dummyjson.com/c/d505-cb62-41ec-9f77");
@@ -9,6 +12,9 @@ window.addEventListener("load", () => {
     )[0];
 
     products.forEach((product) => {
+      if ( product.category !=  "All" && product.category != Gcategory){
+        return;
+      }
       let card = document.createElement("div");
       card.classList.add("product-card");
 
