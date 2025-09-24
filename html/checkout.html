@@ -26,7 +26,11 @@
           </ul>
 
           <div class="tools">
-            <input type="text" placeholder="What Are You Looking For" />
+            <input
+              type="text"
+              placeholder="What Are You Looking For"
+              required
+            />
             <i class="fa-solid fa-magnifying-glass last-icon"></i>
             <i class="fa-solid fa-cart-plus"></i>
             <i class="fa-regular fa-heart"></i>
@@ -43,17 +47,32 @@
     <div class="billing-details section">
       <div class="col1">
         <label for="first-name">First Name</label><br />
-        <input type="text" name="first-name" id="first-name" /><br />
+        <input type="text" name="first-name" id="first-name" required /><br />
         <label for="last-name">Last Name</label><br />
-        <input type="text" name="last-name" id="last-name" /><br />
+        <input type="text" name="last-name" id="last-name" required /><br />
         <label for="street-address">Street Address</label><br />
-        <input type="text" name="street-address" id="street-address" /><br />
+        <input
+          type="text"
+          name="street-address"
+          id="street-address"
+          required
+        /><br />
         <label for="city">City</label><br />
-        <input type="text" name="city" id="city" /><br />
+        <input type="text" name="city" id="city" required /><br />
         <label for="phone-number">Phone Number</label><br />
-        <input type="text" name="phone-number" id="phone-number" /><br />
+        <input
+          type="text"
+          name="phone-number"
+          id="phone-number"
+          required
+        /><br />
         <label for="email-address">Email Address</label><br />
-        <input type="text" name="email-address" id="email-address" /><br />
+        <input
+          type="text"
+          name="email-address"
+          id="email-address"
+          required
+        /><br />
       </div>
       <div class="col2">
         <div class="products">
@@ -80,11 +99,11 @@
             <p>$650</p>
           </div>
         </div>
-        <input type="radio" name="cash-bank" id="bank" />
+        <input type="radio" name="cash-bank" id="bank" required />
         <label for="bank">Bank</label>
         <br />
 
-        <input type="radio" name="cash-bank" id="cash" />
+        <input type="radio" name="cash-bank" id="cash" required />
         <label for="cash">Cash On Delivery</label>
 
         <div class="coupon">
@@ -97,7 +116,7 @@
           <button>Apply Coupon</button>
         </div>
 
-        <button>Place Order</button>
+        <button class="place-order">Place Order</button>
       </div>
     </div>
 

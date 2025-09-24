@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
     )[0];
 
     products.forEach((product) => {
-      if ( Gcategory != "all" && product.category != Gcategory){
+      if (Gcategory != "all" && product.category != Gcategory) {
         return;
       }
       let card = document.createElement("div");
@@ -65,4 +65,5 @@ window.addEventListener("load", () => {
   }
 
   initProducts();
+
 });
