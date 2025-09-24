@@ -19,6 +19,15 @@ document.querySelector(".place-order").addEventListener("click", () => {
     }
   });
 
+  
+  let radios = document.querySelectorAll('input[name="cash-bank"]');
+  let radioChecked = Array.from(radios).some((radio) => radio.checked);
+
+  if (!radioChecked) {
+    alert("Please select Bank or Cash on Delivery");
+    hasError = true;
+  }
+
   if (hasError) {
     alert("fill the empty fields");
   } else {
