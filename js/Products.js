@@ -1,6 +1,6 @@
 window.addEventListener("load", () => {
   async function initProducts() {
-    let res = await fetch("https://dummyjson.com/c/0792-0dc3-4a3d-b95e");
+    let res = await fetch("https://dummyjson.com/c/d505-cb62-41ec-9f77");
     let data = await res.json();
     let products = data.products;
 
