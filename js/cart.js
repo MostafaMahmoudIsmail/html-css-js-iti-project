@@ -43,4 +43,17 @@ window.addEventListener("load", () => {
 
     cartContent.appendChild(cartItem);
   });
+
+
+  let CheckOutBtn = document.getElementsByClassName("BtnCheckOut")[0]
+  CheckOutBtn.addEventListener("click", () => {
+    checkout = cart
+    saveCheckout()
+    window.location.href = "checkout.html"
+  })
+
+
+
+
+
 });
