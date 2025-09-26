@@ -7,19 +7,25 @@ window.addEventListener("load", () => {
     let data = await res.json();
     let products = data.products;
 
+    loadFav();
+    loadCart();
+
     let productContainer = document.getElementsByClassName(
       "ourProducts-content"
     )[0];
 
     products.forEach((product) => {
-      if (Gcategory != "all" && product.category != Gcategory) {
-        return;
-      }
+      product.quantity = 1;
+
       let card = document.createElement("div");
       card.classList.add("product-card");
 
       let favIcon = document.createElement("i");
       favIcon.classList.add("fa-regular", "fa-heart");
+
+      if (fav && fav.some((p) => p.id === product.id)) {
+        favIcon.classList.add("active-heart");
+      }
 
       let cardImage = document.createElement("div");
       cardImage.classList.add("card-image");
@@ -44,6 +50,7 @@ window.addEventListener("load", () => {
       for (let i = 0; i < 5; i++) {
         let star = document.createElement("i");
         star.classList.add("fa-solid", "fa-star");
+
         if (i < product.rating) {
           star.style.color = "#ffd43b";
         } else {
@@ -61,9 +68,33 @@ window.addEventListener("load", () => {
       card.appendChild(cardContent);
 
       productContainer.appendChild(card);
+
+      favIcon.addEventListener("click", () => {
+        favIcon.classList.toggle("active-heart");
+
+        if (favIcon.classList.contains("active-heart")) {
+          fav.push(product);
+        } else {
+          fav = cart.filter((p) => p.id !== product.id);
+        }
+        saveFav();
+      });
+
+      cardImage.addEventListener("click", () => {
+        let existing = cart.find((p) => p.id === product.id);
+
+        if (existing) {
+          cart = cart.filter((p) => p.id !== product.id);
+          cardImage.classList.remove("cart-active");
+        } else {
+          cart.push({ ...product, quantity: 1 });
+          cardImage.classList.add("cart-active");
+        }
+
+        saveCart();
+      });
     });
   }
 
   initProducts();
-
 });

@@ -165,44 +165,35 @@ window.addEventListener("load", () => {
 
   initProducts();
 
-  // nav links
-  let homePage = document.getElementsByClassName("homePage")[0];
-  let contactPage = document.getElementsByClassName("contactPage")[0];
-  let aboutPage = document.getElementsByClassName("aboutPage")[0];
-  let signupPage = document.getElementsByClassName("sign-upPage")[0];
+  // // nav links
+  // let homePage = document.getElementsByClassName("homePage")[0];
+  // let productPage = document.getElementsByClassName("productPage")[0];
+  // let aboutPage = document.getElementsByClassName("aboutPage")[0];
+  // let signupPage = document.getElementsByClassName("sign-upPage")[0];
 
-  homePage.addEventListener("click", () => {
-    window.location.href = "home.html";
-  });
+  // homePage.addEventListener("click", () => {
+  //   window.location.href = "home.html";
+  // });
 
-  contactPage.addEventListener("click", () => {
-    window.location.href = "home.html";
-  });
+  // productPage.addEventListener("click", () => {
+  //   window.location.href = "products.html?category=all";
+  // });
 
-  aboutPage.addEventListener("click", () => {
-    window.location.href = "home.html";
-  });
+  // aboutPage.addEventListener("click", () => {
+  //   window.location.href = "home.html";
+  // });
 
-  signupPage.addEventListener("click", () => {
-    window.location.href = "home.html";
-  });
+  // signupPage.addEventListener("click", () => {
+  //   window.location.href = "home.html";
+  // });
 
-  // all products nav
+  // // all products nav
 
   let allProductsBtn = document.querySelector(".product-button");
   allProductsBtn = allProductsBtn.querySelector("button");
   allProductsBtn.addEventListener("click", () => {
     window.location.href = "products.html?category=all";
   });
-
-  // let FavIcon = document.querySelectorAll(".fa-heart");
-  // FavIcon.forEach((icon) => {
-  //   icon.addEventListener("click", () => {
-  //     icon.style.backgroundColor = "black";
-  //     icon.style.color = "black";
-  //     icon.style.fontSize = "30px";
-  //   });
-  // });
 
   let FavIcon = document.querySelectorAll(".product-card i");
   FavIcon.forEach((icon) => {
@@ -211,4 +202,3 @@ window.addEventListener("load", () => {
     });
   });
 });
-

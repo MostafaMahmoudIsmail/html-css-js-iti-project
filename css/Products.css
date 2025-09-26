@@ -24,6 +24,7 @@
   font-weight: 700;
 }
 
+/* our products */
 .ourProducts {
   margin-bottom: 200px;
 }
@@ -34,8 +35,8 @@
 }
 
 .ourProducts-content {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 15px;
   justify-content: space-between;
   align-items: center;
@@ -135,3 +136,14 @@
   cursor: pointer;
 }
 
+
+/* icons */
+.fa-heart.active-heart {
+  color: red;
+  transition: all 0.3s ease;
+}
+
+.card-image.cart-active::after {
+  content: "Remove from Cart";
+  background-color: #db4444;
+}

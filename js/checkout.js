@@ -19,20 +19,35 @@ window.addEventListener("load", () => {
         input.classList.remove("error");
       }
     });
+    let allErrors = "";
+
+    let phoneInput = document.getElementById("phone-number").value.trim();
+    if (phoneInput !== "" && !/^\d+$/.test(phoneInput)) {
+      allErrors += "❗ Phone number must contain only digits\n";
+      hasError = true;
+    }
+
+    let emailInput = document.getElementById("email-address").value.trim();
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailInput !== "" && !emailRegex.test(emailInput)) {
+      allErrors += "❗ Please enter a valid email address\n";
+      hasError = true;
+    }
 
     let radios = document.querySelectorAll('input[name="cash-bank"]');
     let radioChecked = Array.from(radios).some((radio) => radio.checked);
-
     if (!radioChecked) {
-      alert("Please select Bank or Cash on Delivery");
+      allErrors += "❗ Please select Bank or Cash on Delivery\n";
       hasError = true;
     }
 
     if (hasError) {
-      alert("fill the empty fields");
+      allErrors += "❗fill the empty fields\n";
     } else {
-      alert("All good");
+      allErrors += "All good❗\n";
     }
+
+    showWarning(allErrors);
   });
 
   function initCheckout() {
@@ -75,4 +90,16 @@ window.addEventListener("load", () => {
   }
 
   initCheckout();
+
+  function showWarning(message) {
+    document.getElementById("warningText").innerText = message;
+    document.getElementById("warningOverlay").style.display = "flex";
+  }
+
+  let closebtn = document.getElementById("close-warning");
+  closebtn.addEventListener("click", closeWarning);
+
+  function closeWarning() {
+    document.getElementById("warningOverlay").style.display = "none";
+  }
 });

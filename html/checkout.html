@@ -19,10 +19,10 @@
         </div>
         <div class="navbar-content">
           <ul>
-            <li>Home</li>
-            <li>Contact</li>
-            <li>About</li>
-            <li>Sign Up</li>
+            <li class="nav-active homePage">Home</li>
+            <li class="productPage">products</li>
+            <li class="aboutPage">About</li>
+            <li class="sign-upPage">Sign Up</li>
           </ul>
 
           <div class="tools">
@@ -32,8 +32,8 @@
               required
             />
             <i class="fa-solid fa-magnifying-glass last-icon"></i>
-            <i class="fa-solid fa-cart-plus"></i>
-            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-cart-plus" id="cart-icon"></i>
+            <i class="fa-regular fa-heart" id="fav-icon"></i>
           </div>
         </div>
       </div>
@@ -75,9 +75,7 @@
         /><br />
       </div>
       <div class="col2">
-        <div class="products">
-          
-        </div>
+        <div class="products"></div>
         <div class="salary">
           <div class="subtotal">
             <p>Sub Total:</p>
@@ -130,6 +128,13 @@
         <p>Help</p>
         <p>Shipping & Delivery</p>
         <p>Returns & Replacements</p>
+      </div>
+    </div>
+
+    <div class="overlay" id="warningOverlay">
+      <div class="popup">
+        <h2 id="warningText">Warning Message</h2>
+        <button id="close-warning">OK</button>
       </div>
     </div>
 
