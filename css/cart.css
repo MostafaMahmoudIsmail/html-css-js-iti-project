@@ -86,11 +86,6 @@ button {
 }
 
 
-/* ====================== */
-/* 📱 Responsive Cart Page */
-/* ====================== */
-
-/* Large tablets / small laptops */
 @media (max-width: 1124px) {
   .cart-content {
     grid-template-columns: 1fr; /* one column */
@@ -112,7 +107,7 @@ button {
   }
 }
 
-/* Tablets */
+
 @media (max-width: 1349px) {
   .cart-item {
     flex-direction: column;
@@ -146,7 +141,7 @@ button {
   }
 }
 
-/* Mobile */
+
 @media (max-width: 576px) {
   .section-header {
     justify-content: center;

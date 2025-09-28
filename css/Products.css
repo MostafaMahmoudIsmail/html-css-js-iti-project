@@ -150,13 +150,6 @@
 }
 
 
-
-
-/* ========================= */
-/* 📱 Responsive Products Page */
-/* ========================= */
-
-/* Large tablets / small laptops */
 @media (max-width: 1124px) {
   .ourProducts-header p {
     font-size: 24px;
@@ -185,7 +178,7 @@
   }
 }
 
-/* Tablets */
+
 @media (max-width: 768px) {
   .ourProducts-content {
     grid-template-columns: repeat(2, 1fr);
@@ -201,7 +194,7 @@
   }
 }
 
-/* Mobile */
+
 @media (max-width: 576px) {
   .ourProducts-header p {
     font-size: 20px;
