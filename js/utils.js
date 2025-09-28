@@ -68,4 +68,13 @@ window.addEventListener("load", () => {
   document.getElementById("fav-icon").addEventListener("click", () => {
     window.location.href = "fav.html";
   });
+
+  let colorModeBtn = document.getElementsByClassName("color-mode")[0];
+  colorModeBtn.addEventListener("click", () => {
+    document.querySelector(".header").classList.toggle("dark-mode");
+    document.querySelector("body").classList.toggle("dark-mode");
+    document.querySelector("p").classList.toggle("dark-mode");
+    document.querySelector(".advertisment").classList.toggle("advertisment-darkmode");
+  });
+
 });

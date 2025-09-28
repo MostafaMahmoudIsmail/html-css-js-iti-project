@@ -27,6 +27,9 @@
   justify-content: space-between;
   padding: 30px;
   background-color: white;
+  /* on dark mode */
+  /* background-color: #1a1a1a;
+  color: #ffffff !important; */
   align-items: center;
 }
 .navbar {
@@ -91,8 +94,8 @@
 
 .last-icon {
   position: absolute;
-  top: 5px;
-  right: 69px;
+  top: 7px;
+  right: 100px;
   font-size: 15px;
 }
 
@@ -115,4 +118,17 @@
 .footer p {
   font-size: 15px;
   cursor: pointer;
+}
+
+
+
+/* color-mode  */
+.dark-mode{
+   background-color: #1a1a1a !important;
+   color: #ffffff !important;
+}
+
+/* advertisment display */
+.advertisment-darkmode{
+  display: none !important;
 }

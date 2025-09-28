@@ -1,5 +1,15 @@
+:root{
+   --main-color:#db4444;
+   /* --main-color:#ff5555; */
+}
+/* on dark  */
+/* body{
+  background-color: #1a1a1a;
+}
+p{
+  color: #ffffff !important;
+} */
 /* slider */
-
 .slideshow-container {
   position: relative;
   margin: 0 auto;
@@ -94,13 +104,13 @@
   width: 15px;
   height: 30px;
   border-radius: 7px;
-  background-color: #db4444;
+  background-color: var(--main-color);
   margin-right: 8px;
 }
 
 .section-header .title {
   height: 20px;
-  color: #db4444;
+  color: var(--main-color);
   font-weight: 700;
 }
 
@@ -121,7 +131,7 @@
 }
 
 .category-card:hover {
-  background-color: #db4444;
+  background-color: var(--main-color);
   color: white;
 }
 
@@ -133,7 +143,7 @@
   font-size: 50px;
   margin-top: 25px;
   margin-bottom: 15px;
-  color: #db4444;
+  color: var(--main-color);
 }
 
 .category-content {
@@ -233,7 +243,7 @@
 .card-content .salary {
   display: inline;
   font-size: 15px;
-  color: #db4444;
+  color: var(--main-color);
 }
 .card-content {
   margin-left: 9px;
@@ -250,7 +260,7 @@
 }
 .product-button button {
   color: white;
-  background-color: #db4444;
+  background-color: var(--main-color);
   border-radius: 5px;
   padding: 10px;
   border-color: transparent;
@@ -280,5 +290,5 @@
 
 .card-image.cart-active::after {
   content: "Remove from Cart";
-  background-color: #db4444;
+  background-color: var(--main-color);
 }
