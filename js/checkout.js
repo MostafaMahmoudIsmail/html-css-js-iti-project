@@ -61,7 +61,9 @@ window.addEventListener("load", () => {
 
     checkout.forEach((product) => {
       let price = parseFloat(product.price.replace("$", ""));
-      subtotal += price;
+      let quantity = product.quantity || 1;
+      let totalPrice = price * quantity;
+      subtotal += totalPrice;
 
       const productDiv = document.createElement("div");
       productDiv.classList.add("product");
@@ -72,11 +74,11 @@ window.addEventListener("load", () => {
 
       const name = document.createElement("p");
       name.classList.add("product-name");
-      name.textContent = product.title;
+      name.textContent = `${product.title} (x${quantity})`;
 
       const priceTag = document.createElement("p");
       priceTag.classList.add("product-price");
-      priceTag.textContent = product.price;
+      priceTag.textContent = `$${totalPrice}`;
 
       productDiv.appendChild(img);
       productDiv.appendChild(name);

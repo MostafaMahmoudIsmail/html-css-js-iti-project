@@ -3,7 +3,8 @@ let Gcategory = params.get("category");
 
 window.addEventListener("load", () => {
   async function initProducts() {
-    let res = await fetch("https://dummyjson.com/c/d505-cb62-41ec-9f77");
+    // let res = await fetch("https://dummyjson.com/c/d505-cb62-41ec-9f77");
+    let res = await fetch("https://dummyjson.com/c/8a82-42ae-4287-b215");
     let data = await res.json();
     let products = data.products;
 

@@ -163,10 +163,6 @@
 
 
 
-
-/* ========= Responsive Media Queries ========= */
-
-/* Tablets */
 @media (max-width: 992px) {
   .billing-details {
     flex-direction: column;

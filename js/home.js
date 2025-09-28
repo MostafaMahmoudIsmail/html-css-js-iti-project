@@ -70,7 +70,8 @@ window.addEventListener("load", () => {
   initCategory();
 
   async function initProducts() {
-    let res = await fetch("https://dummyjson.com/c/e28b-251e-4547-bb35");
+    // let res = await fetch("https://dummyjson.com/c/e28b-251e-4547-bb35");
+    let res = await fetch("https://dummyjson.com/c/5dd5-afc8-4f02-b94a");
     let data = await res.json();
     let products = data.products;
 
