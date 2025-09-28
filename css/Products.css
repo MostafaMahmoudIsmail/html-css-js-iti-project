@@ -55,6 +55,7 @@
 
 .product-card > i {
   background-color: white;
+  color: black !important;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -139,7 +140,7 @@
 
 /* icons */
 .fa-heart.active-heart {
-  color: red;
+  color: red !important;
   transition: all 0.3s ease;
 }
 
