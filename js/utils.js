@@ -77,4 +77,21 @@ window.addEventListener("load", () => {
     document.querySelector(".advertisment").classList.toggle("advertisment-darkmode");
   });
 
+    
+    let searchIcon = document.querySelector(".last-icon"); 
+    let searchInput = document.querySelector(".tools input");
+    // console.log(searchIcon);
+    // console.log(searchInput);
+    
+    
+    searchIcon.addEventListener("click", () => {
+      let query = searchInput.value.trim(); 
+      // console.log(query);
+      
+      if(query){ 
+        window.location.href = `products.html?category=${String(query)}`;
+      }
+
+  });  
+
 });

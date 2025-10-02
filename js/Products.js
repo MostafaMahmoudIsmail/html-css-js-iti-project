@@ -16,6 +16,13 @@ window.addEventListener("load", () => {
     )[0];
 
     products.forEach((product) => {
+      // console.log(Gcategory);
+      // console.log(product.title);
+      // console.log(Gcategory == product.title);
+      
+      if (Gcategory != "all" && product.category != Gcategory && product.title   != Gcategory) {
+        return;
+      }
       product.quantity = 1;
 
       let card = document.createElement("div");
