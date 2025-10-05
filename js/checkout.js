@@ -1,4 +1,6 @@
+
 window.addEventListener("load", () => {
+  loadCheckout()
   document.querySelector(".place-order").addEventListener("click", () => {
     let inputs = [
       document.getElementById("first-name"),

@@ -1,14 +1,13 @@
 window.addEventListener("load", () => {
   let favContent = document.querySelector(".ourProducts-content");
 
-  let favs = JSON.parse(localStorage.getItem("fav")) || [];
-
-  if (favs.length === 0) {
+  loadFav()
+  if (fav.length === 0) {
     favContent.innerHTML = "<p>You have no favourites</p>";
     return;
   }
 
-  favs.forEach((product) => {
+  fav.forEach((product) => {
 
     let card = document.createElement("div");
     card.classList.add("product-card");
@@ -54,10 +53,10 @@ window.addEventListener("load", () => {
     favContent.appendChild(card);
 
     removeIcon.addEventListener("click", () => {
-      favs = favs.filter((p) => p.id !== product.id);
-      localStorage.setItem("fav", JSON.stringify(favs));
+      fav = fav.filter((p) => p.id !== product.id);
+      localStorage.setItem("fav", JSON.stringify(fav));
       card.remove();
-      if (favs.length === 0) {
+      if (fav.length === 0) {
         favContent.innerHTML = "<p>You have no favourites</p>";
       }
     });

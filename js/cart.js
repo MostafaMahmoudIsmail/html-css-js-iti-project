@@ -1,7 +1,6 @@
 window.addEventListener("load", () => {
   let cartContent = document.querySelector(".cart-content");
-
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  loadCart()
 
   if (cart.length === 0) {
     cartContent.innerHTML = "<p>Your cart is empty </p>";

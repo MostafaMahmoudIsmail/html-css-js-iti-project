@@ -143,7 +143,7 @@ window.addEventListener("load", () => {
         if (favIcon.classList.contains("active-heart")) {
           fav.push(product);
         } else {
-          fav = cart.filter((p) => p.id !== product.id);
+          fav = fav.filter((p) => p.id !== product.id);
         }
         saveFav();
       });
@@ -155,7 +155,7 @@ window.addEventListener("load", () => {
           cart = cart.filter((p) => p.id !== product.id);
           cardImage.classList.remove("cart-active");
         } else {
-          cart.push({ ...product, quantity: 1 });
+          cart.push(product);
           cardImage.classList.add("cart-active");
         }
 
@@ -196,10 +196,10 @@ window.addEventListener("load", () => {
     window.location.href = "products.html?category=all";
   });
 
-  let FavIcon = document.querySelectorAll(".product-card i");
-  FavIcon.forEach((icon) => {
-    icon.addEventListener("click", () => {
-      icon.classList.toggle("active-heart");
-    });
-  });
+  // let FavIcon = document.querySelectorAll(".product-card i");
+  // FavIcon.forEach((icon) => {
+  //   icon.addEventListener("click", () => {
+  //     icon.classList.toggle("active-heart");
+  //   });
+  // });
 });

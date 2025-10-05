@@ -206,7 +206,7 @@
   }
 
   .tools {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 8px;
     width: 100%;
@@ -218,9 +218,11 @@
     padding-right: 35px;
   }
 
-  .last-icon {
-    right: 35px;
-    top: 9px;
+  .last-icon::before {
+    /* right: 35px;
+    top: 9px; */
+    display: none;
+    /* color: #db4444; */
   }
 }
 

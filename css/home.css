@@ -359,15 +359,6 @@ p{
     text-align: center;
   }
 
-  .section-header {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .section-header .title {
-    width: auto;
-    font-size: 18px;
-  }
 }
 
 /* products */
@@ -411,7 +402,7 @@ p{
   }
 
   .product-card {
-    width: 100%;
+    
     max-width: 90%;
     height: auto;
     margin: 0 auto;
